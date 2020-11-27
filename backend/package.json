@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "mini projet dans le cadre du recrutement de la société Confledis, utilisant NodeJs Angulair Express et MongoDb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "NodeJs",
+    "Express",
+    "MongoDb",
+    "CrudApplication"
+  ],
+  "author": "Abdelmounaim ABDERREZAK",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.16"
+  }
+}

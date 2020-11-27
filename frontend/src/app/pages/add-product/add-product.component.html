@@ -1,0 +1,35 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="!loading" class="col-sm-6 offset-sm-3 mt-2">
+
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="title">Nom du Produit</label>
+            <input type="text" placeholder="Que vendez-vous ?" id="title" formControlName="nom" class="form-control">
+            <small class="text-danger " *ngIf="productForm.value.nom=='' && productForm.get('nom').touched">
+                Le nom est requis
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label for="prix">Prix (en €)</label>
+            <input type="number" id="prix" class="form-control" formControlName="prix" min="0">
+            <small class="text-danger " *ngIf="productForm.value.prix=='' && productForm.get('prix').touched">
+                Le prix est requis
+            </small>
+        </div>
+
+        <div class="form-group">
+            <label for="qty">Quantité</label>
+            <input type="number" id="qty" class="form-control" formControlName="quantite" min="0">
+            <small class="text-danger " *ngIf="productForm.value.quantite=='' && productForm.get('quantite').touched">
+                La quantité est requise
+            </small>
+        </div>
+
+        <button class="btn btn-primary" [disabled]="productForm.invalid">Valider</button>
+        <p class="alert-danger" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    </form>
+
+</div>

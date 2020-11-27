@@ -1,0 +1,29 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+
+<div class="container">
+    <div class="col-md-6 mb-4 mt-4 mb-4 search-prods">
+
+        <form class="input-group" #f="ngForm" (submit)="chercher(name.value)">
+            <input type="text" #name class="form-control form-control-sm"
+                placeholder="chercher un produit par nom ..." aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-sm btn-outline-white my-0" 
+                    type="submit">Rechercher</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div class="product-grid" *ngIf="products.length >= 0">
+
+    <div class="product-pane" *ngFor="let product of products" (click)="onProductClicked(product._id)">
+        <div class="product-info">
+            <h3>
+                {{ product.nom }}
+            </h3>
+            <h5>{{ product.prix | currency:'EUR' }}</h5>
+        </div>
+    </div>
+
+</div>
