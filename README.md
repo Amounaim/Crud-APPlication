@@ -1,0 +1,2 @@
+# Crud-APPlication
+Développement d'une application Front End avec Angular 9 qui permet de faire le CRUD  (Create, Read, Update and Delete) d'un objet produit en utilisant une API REST avec Node, Express et MongoDB  Le projet est cappable de faire l'enregistrement de produit , la modification d'un produit , l'affichage d'une liste des produits , la suppression d'un produit et la recherche d'un produit  Nb : un produit est caractérisé par le nom , le prix et la quantité 
