@@ -5,12 +5,12 @@
 
     <button class="btn btn-link" (click)="onGoBack()"> << Retour</button>
 
-    <div class="single-product-pane">
+    <div class="single-product-pane card ">
 
-        <div class="single-product-info">
+        <div class="single-product-info m-4">
             <h1>{{ product?.nom }}</h1>
             <h2 class="single-product-price">{{ product?.prix | currency:'EUR' }}</h2>
-            <p>{{ product?.quantite }}</p>
+            <p>Quantité : &nbsp; {{ product?.quantite }}</p>
             <button class="btn btn-success m-1" (click)="onModify()">Modifier</button>
             <button class="btn btn-danger m-1" (click)="onDelete()">Supprimer</button>
         </div>
